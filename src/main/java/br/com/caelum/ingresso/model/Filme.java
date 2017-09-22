@@ -20,17 +20,12 @@ public class Filme {
     private String nome;
     private Duration duracao;
     private String genero;
-    
     private BigDecimal preco;
-    
-    
     
     /**
      * @deprecated hibernate only
      */
-    public Filme() {
-
-    }
+    public Filme() {}
     
     public Filme(String nome, Duration duracao, String genero, BigDecimal preco) {
 		this.nome = nome;

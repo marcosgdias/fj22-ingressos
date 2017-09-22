@@ -34,20 +34,10 @@ public class Sala {
     
     private BigDecimal preco;
 
-    public BigDecimal getPreco() {
-		return preco;
-	}
-
-	public void setPreco(BigDecimal preco) {
-		this.preco = preco;
-	}
-
 	/**
      * @deprecated hibernate only
      */
-    public Sala() {
-
-    }
+    public Sala() {}
     
     public Sala(String nome, BigDecimal preco){
     	this.nome = nome;
@@ -86,6 +76,14 @@ public class Sala {
     public void setLugares(List<Lugar> lugares) {
         this.lugares = lugares;
     }
+    
+    public BigDecimal getPreco() {
+		return preco;
+	}
+
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
+	}
 
     public Map<String, List<Lugar>> getMapaDeLugares() {
         if(!this.lugares.isEmpty()){
