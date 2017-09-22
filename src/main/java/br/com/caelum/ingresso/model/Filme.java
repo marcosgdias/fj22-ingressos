@@ -1,9 +1,12 @@
 package br.com.caelum.ingresso.model;
 
+import java.math.BigDecimal;
+import java.time.Duration;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.time.Duration;
+
 
 /**
  * Created by nando on 03/03/17.
@@ -18,6 +21,8 @@ public class Filme {
     private Duration duracao;
     private String genero;
     
+    private BigDecimal preco;
+    
     
     
     /**
@@ -27,10 +32,11 @@ public class Filme {
 
     }
     
-    public Filme(String nome, Duration duracao, String genero) {
+    public Filme(String nome, Duration duracao, String genero, BigDecimal preco) {
 		this.nome = nome;
 		this.duracao = duracao;
 		this.genero = genero;
+		this.preco = preco;
 	}
 
 	public Integer getId() {
@@ -64,4 +70,14 @@ public class Filme {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
+	public BigDecimal getPreco() {
+		return preco;
+	}
+
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
+	}
+
+
 }
